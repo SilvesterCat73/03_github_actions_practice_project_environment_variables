@@ -17,9 +17,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Cache dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.npm
           key: npm-deps-${{ hashFiles('**/package-lock.json') }}
@@ -38,4 +38,4 @@ jobs:
       - name: Output information
         run: |        
           echo "MONGODB_USERNAME:${{ env.MONGODB_USERNAME }}"
-          echo "MONGODB_DB_NAME:${{ env.MONGODB_DB_NAMEgit  }}"
+          echo "MONGODB_DB_NAME:${{ env.MONGODB_DB_NAME }}"npm 
